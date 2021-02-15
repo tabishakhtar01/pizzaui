@@ -1,0 +1,20 @@
+<nav class="container mx-auto flex items-center justify-between py-5">
+        <div>
+            {{!-- <img src="/img/p-logo.png" alt="logo" class="h-12"> --}}
+            <h1 class="font-bold text-lg md:text-5xl cursor-pointer"><a class="cursor-pointer" href="/">PIZZA</a></h1>
+        </div>
+        <div>
+            <ul class="flex item-center">
+                <li class="ml-6 font-bold" ><a href="/#menupage">Menu</a></li>
+                {{!-- {{#if log}} --}}
+                {{!-- <li class="ml-6 font-bold"><a href="/login">Logout</a></li> --}}
+                {{!-- {{else}} --}}
+                <li class="ml-6 font-bold"><a href="/register">Register</a></li>
+                <li class="ml-6 font-bold"><a href="/login">Login</a></li>
+                {{!-- {{/if}} --}}
+                <li class="ml-6 font-bold"><a href="/cart"><img src="/img/add-to-cart.png" alt="cart"></a></li>
+                <p id="count" class="ml-1"></p>
+
+            </ul>
+        </div>
+    </nav>
