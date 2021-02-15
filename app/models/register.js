@@ -32,11 +32,17 @@ const registerSchema = new mongoose.Schema(
 
 registerSchema.pre('save',async function(next)
 {   
-    // console.log(`Password before Hashing: ${this.password}`)
-    this.password = await bcrypt.hash(this.password,10);
+    try{
+        // console.log(`Password before Hashing: ${this.password}`)
+        this.password = await bcrypt.hash(this.password,10);
     // console.log(`Password after Hashing: ${this.password}`)
 
     next();
+    }catch(e)
+    {
+        console.log(e);
+    }
+    
 })
 
 
